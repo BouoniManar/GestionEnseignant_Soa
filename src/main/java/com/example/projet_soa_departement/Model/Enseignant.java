@@ -19,8 +19,7 @@ public class Enseignant {
     private String email;
     private String matiere;
 
-    @OneToMany(mappedBy = "enseignant", cascade = CascadeType.ALL)
-    private List<Absence> absences;
+
 
     public void setId(Long id) {
         this.id = id;

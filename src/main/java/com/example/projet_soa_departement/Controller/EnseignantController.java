@@ -1,12 +1,10 @@
 package com.example.projet_soa_departement.Controller;
 
-import com.example.projet_soa_departement.Model.Absence;
 import com.example.projet_soa_departement.Model.Enseignant;
 import com.example.projet_soa_departement.Service.EnseignantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -42,6 +40,8 @@ public class EnseignantController {
     public void deleteEnseignant(@PathVariable int id) {
         enseignantService.deleteEnseignant(id);
     }
+
+
 
 
 }

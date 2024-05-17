@@ -1,30 +1,23 @@
 package com.example.projet_soa_departement.Model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
-import java.util.Date;
-
 @Data
 @Entity
-public class Absence {
+public class CadreAdministratif {
 
     @jakarta.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "enseignant_id", nullable = false)
-    private Enseignant enseignant;
-
-    public void setDateAbsence(Date dateAbsence) {
-        this.dateAbsence = dateAbsence;
-    }
-
-    @Temporal(TemporalType.DATE)
-    private Date dateAbsence;
+    private String nom;
+    private String prenom;
+    private String email;
+    private String poste;
 
     public void setId(Long id) {
         this.id = id;
