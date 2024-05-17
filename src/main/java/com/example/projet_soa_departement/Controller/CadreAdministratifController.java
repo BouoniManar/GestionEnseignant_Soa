@@ -24,17 +24,17 @@ public class CadreAdministratifController {
         return cadreAdministratifService.getAllCadresAdministratifs();
     }
 
-    @PostMapping("/addCadre")
+    @PostMapping("/add")
     public CadreAdministratif addCadreAdministratif(@RequestBody CadreAdministratif cadreAdministratif) {
         return cadreAdministratifService.addCadreAdministratif(cadreAdministratif);
     }
 
-    @PutMapping("/updC/{id}")
+    @PutMapping("/update/{id}")
     public CadreAdministratif updateCadreAdministratif(@PathVariable Long id, @RequestBody CadreAdministratif cadreAdministratif) {
         return cadreAdministratifService.updateCadreAdministratif(id, cadreAdministratif);
     }
 
-    @DeleteMapping("/delC/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteCadreAdministratif(@PathVariable Long id) {
         cadreAdministratifService.deleteCadreAdministratif(id);
     }
